@@ -1,0 +1,823 @@
+@charset "urf-8";
+
+@font-face {
+    font-family: 'Pretendard-Bold';
+    src: url('../css/font/Pretendard/Pretendard-Bold.eot');
+    src: url('../css/font/Pretendard/Pretendard-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../css/font/Pretendard/Pretendard-Bold.woff2') format('woff2'),
+        url('../css/font/Pretendard/Pretendard-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('../css/font/Pretendard/Pretendard-Regular.eot');
+    src: url('../css/font/Pretendard/Pretendard-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../css/font/Pretendard/Pretendard-Regular.woff2') format('woff2'),
+        url('../css/font/Pretendard/Pretendard-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard-Medium';
+    src: url('../css/font/Pretendard/Pretendard-Medium.eot');
+    src: url('../css/font/Pretendard/Pretendard-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../css/font/Pretendard/Pretendard-Medium.woff2') format('woff2'),
+        url('../css/font/Pretendard/Pretendard-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Red Hat Display-Bold';
+    src: url('../css/font/RedHatDisplay/RedHatDisplay-Bold.eot');
+    src: url('../css/font/RedHatDisplay/RedHatDisplay-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../css/font/RedHatDisplay/RedHatDisplay-Bold.woff2') format('woff2'),
+        url('../css/font/RedHatDisplay/RedHatDisplay-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Red Hat Display-Regular';
+    src: url('../css/font/RedHatDisplay/RedHatDisplay-Regular.eot');
+    src: url('../css/font/RedHatDisplay/RedHatDisplay-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../css/font/RedHatDisplay/RedHatDisplay-Regular.woff2') format('woff2'),
+        url('../css/font/RedHatDisplay/RedHatDisplay-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* 글꼴 */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+body{
+    font-family: 'Pretendard-Regular';
+    position: relative;
+}
+
+.header{
+    height: 80px;
+}
+
+.header .inner{
+    width: 1440px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .inner h1 a img{
+    width: 270px;
+    height: 22px;
+    object-fit: cover;
+}
+
+.header .inner .nav .gnb{
+    display: flex;
+    gap: 120px;
+    font-family: 'Pretendard-Medium';
+    font-size: 18px;
+}
+
+.header .inner .nav .gnb > li {
+    position: relative;
+}
+
+.header .inner .nav .gnb > li .depth01{
+    line-height: 80px;
+    padding: 0 20px;
+}
+
+.header .inner .nav .gnb > li .depth01:hover{
+    color: #AC192F;
+    transition: 0.5s;
+}
+
+.header .inner .nav .gnb > li:hover .depth02{
+    opacity: 1;
+    visibility: visible;
+    transition: 0.5s;
+}
+
+.header .inner .nav .gnb > li .depth02{
+    width: 250px;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 16px;
+    color: #555;
+    background-color: #fff;
+    border-radius: 20px;
+    /* border: #bebebebb solid 0.5px; */
+    box-shadow: 5px 5px 20px #9b9b9b60;
+    z-index: 999;
+}
+
+.header .inner .nav .gnb > li .depth02:nth-child(2){
+    left: -95%;
+
+}
+
+.header .inner .nav .gnb > li .box2:nth-child(2){
+    left: -125%;
+
+}
+
+.header .inner .nav .gnb > li .box3:nth-child(2){
+    left: -55%;
+
+}
+
+.header .inner .nav .gnb > li .box4:nth-child(2){
+    left: -73%;
+
+}
+
+.header .inner .nav .gnb > li .depth02 li{
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+/* 헤더 끝 */
+
+/* 메인비주얼 시작 */
+
+
+.main_visual .visual_box .slider {
+    overflow: hidden;
+    width: 100%;
+    height: 717px;
+    position: relative;
+    border-radius: 20px;
+   }
+    
+   .main_visual .visual_box .slider .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    animation: slider 16.5s infinite;
+   }
+    
+   .main_visual .visual_box .slider .slide:nth-child(1) {
+    background: url('../img/main-visual.png') center center / cover no-repeat;
+    animation-delay: 0s;
+    }
+    
+    .main_visual .visual_box .slider .slide:nth-child(2) {
+    background: url('../img/main-visual2.png') center center / cover no-repeat;
+    animation-delay: -5.5s;
+    }
+    
+    .main_visual .visual_box .slider .slide:nth-child(3) {
+    background: url('../img/main-visual3.png') center center / cover no-repeat;
+    animation-delay: -11s;
+    }
+    
+    @keyframes slider {
+    0%, 30%, 100% {
+        transform: translateX(0);
+        animation-timing-function: ease;
+    }
+    33% {
+        transform: translateX(-100%);
+        animation-timing-function: step-end;
+    }
+    97% {
+        transform: translateX(100%);
+        animation-timing-function: ease;
+    }
+    }
+
+
+/* 메인비주얼 끝 */
+
+/* 메뉴 시작 */
+
+.menu_box{
+    width: 100%;
+}
+
+.menu_box .menu_title{
+    width: 1440px;
+    margin: 0 auto;
+    margin-top: 120px;
+    margin-bottom: 60px;
+}
+
+.menu_box .menu_title h2{
+    font-family: 'Red Hat Display-Bold';
+    text-align: center;
+    font-size: 45px;
+   
+}
+
+.menu_box .menu_wrap{
+    width: 100%;
+    display: flex;
+    gap: 110px;
+    margin-bottom: 180px;
+    justify-content: center;
+}
+
+
+.menu_box .menu_wrap .menu_item img{
+    width: 220px;
+    height: 273px;
+    object-fit: cover;
+    transition: 0.7s;
+    
+}
+
+.menu_box .menu_wrap .menu_item img:hover{
+    transform: scale(1.1);
+    transition: 0.7s;
+    
+}
+
+.menu_box .menu_wrap .menu_item p{
+    text-align: center;
+    font-family: 'Pretendard-Bold';
+    font-size: 18px;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* 메뉴 끝 */
+
+/* 가이드 시작 */
+
+.guide{
+    width: 100%;
+}
+
+.guide .guide_wrap {
+    width: 1440px;
+    margin: 0 auto;
+}
+
+.guide .guide_wrap p{
+    font-size: 22px;
+    color: #555;
+    margin-bottom: 16px;
+}
+
+.guide .guide_wrap h3{
+    font-size: 36px;
+    color: #000;
+    margin-bottom: 60px;
+    font-family: 'Pretendard-Bold';
+    line-height: 1;
+}
+
+
+.guide .guide_wrap .three_box{
+    display: flex;
+    gap: 24px;
+    height: 498px;
+    margin-bottom: 24px
+}
+
+/* three box - 첫번째박스 시작 */
+
+.guide .guide_wrap .three_box .three_left{
+    width: 953px;
+    height: 498px;
+    background: url('../img/배경색.png') center center / cover no-repeat;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 60px;
+}
+
+.guide .guide_wrap .three_box .three_left .box_left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.guide .guide_wrap .three_box .three_left .box_left p{
+    font-size: 20px;
+    color: #000000;
+    font-family: 'Pretendard-Bold';
+}
+
+.guide .guide_wrap .three_box .three_left .box_left h4{
+    line-height: 1;
+    font-size: 48PX;
+    font-family: 'Red Hat Display-Bold';
+}
+
+.guide .guide_wrap .three_box .three_left .box_right img{
+    animation-name: img-move;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: linear;
+}
+
+@keyframes img-move {
+    0%{transform: translate(0, 10px);}
+    100%{transform: translate(0, 20px);}
+}
+
+.guide .guide_wrap .three_box .three_left .box_left .btn{
+    margin-top: 37px;
+    display: flex;
+    gap: 14px;
+}
+
+.guide .guide_wrap .three_box .three_left .box_left .btn img{
+    width: 110px;
+    height: 34px;
+    object-fit: contain;
+    display: block;
+}
+/* (3)첫번째 박스 끝 */
+
+/* (3)두번째 박스 시작 */
+
+.guide .guide_wrap .three_box  .three_right{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+    
+.guide .guide_wrap .three_box  .three_right .three_right_1{
+    background-color: #f4f4f4;
+    height: 236px;
+    width: 464px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 48px;
+    padding-right: 25px;
+}
+
+.guide .guide_wrap .three_box  .three_right .three_right_1 .three_r_text .title{
+    font-family: 'Pretendard-Bold';
+    line-height: 1.3;
+    font-size: 25px;
+    margin-bottom: 10px;
+    margin-top: 43px;
+}
+
+.guide .guide_wrap .three_box  .three_right .three_right_1 .three_r_text p{
+    font-size: 14px;
+    color: #000;
+}
+
+/* 검색 버튼 */
+
+.guide .guide_wrap .three_box .three_right .three_right_1 .three_r_text .search{
+    position: relative;
+}
+
+.guide .guide_wrap .three_box .three_right .three_right_1 .three_r_text .search input{
+    border-radius: 20px;
+    border: none;
+    width: 168px;
+    height: 36px;
+    font-family: 'Pretendard-Regular';
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.guide .guide_wrap .three_box .three_right .three_right_1 .three_r_text .search img{
+    width: 19px;
+    height: 19px;
+    object-fit: cover;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
+.guide .guide_wrap .three_box  .three_right .three_right_1 .three_l_img {
+    margin-top: 54px;
+}
+
+.guide .guide_wrap .three_box  .three_right .three_right_1 .three_l_img img{
+    width: 193px;
+    height: 142px;
+    object-fit: cover;
+    display: block;
+}
+
+/* (3)두번째 박스 끝 */
+
+/* (3)세번째 박스 시작 */
+.guide .guide_wrap .three_box  .three_right .three_right_2{
+    background: url('../img/배너2-배경.png') center center / cover no-repeat;
+    height: 236px;
+    width: 464px;
+    border-radius: 20px;
+    padding-left: 48px;
+}
+
+.guide .guide_wrap .three_box  .three_right .three_right_2 .title{
+    font-family: 'Pretendard-Bold';
+    line-height: 1.3;
+    font-size: 25px;
+    margin-top: 43px;
+    margin-bottom: 10px;
+}
+
+.guide .guide_wrap .three_box  .three_right .three_right_2 p{
+    font-size: 14px;
+    color: #000;
+}
+
+.guide .guide_wrap .three_box  .three_right .three_right_2 .right_box_btn a{
+    width: 130px;
+    height: 45px;
+    background-color: #000;
+    display: block;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 45px;
+    text-align: center;
+    font-family: 'Pretendard-Medium';
+}
+
+/* 세번째 박스 끝 */
+
+/* 중간 박스 시작 */
+
+.guide .guide_wrap .one_box{
+    background: url('../img/001-item.png')center center / cover no-repeat;
+    width: 1440px;
+    height: 250px;
+    border-radius: 20px;
+    margin-bottom: 24px;
+}
+
+.guide .guide_wrap .one_box .one_box_text{
+    margin-left: 48px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+}
+
+.guide .guide_wrap .one_box .one_box_text .title{
+    font-size: 35px;
+    font-family: 'Pretendard-Bold';
+    line-height: 1.3;
+}
+
+.guide .guide_wrap .one_box .one_box_text p{
+    margin-bottom: 0;
+    color: #fff;
+    font-size: 18px;
+}
+
+/* 중간박스 끝 */
+
+/* 2 박스 시작 */
+
+.guide .guide_wrap .two_box{
+    width: 1440px;
+    display: flex;
+    gap: 24px;
+    margin-bottom: 120px;
+}
+
+.guide .guide_wrap .two_box .two_box_left{
+    background: url('../img/bg2.png')center center / cover no-repeat;
+    width: 830px;
+    height: 529px;
+    padding-top: 60px;
+    border-radius: 20px;
+}
+
+.guide .guide_wrap .two_box .two_box_left .two_box_left_text{
+    margin-left: 48px;
+}
+
+.guide .guide_wrap .two_box .two_box_left .two_box_left_text .title{
+    color: #fff;
+    font-size: 35px;
+    line-height: 1.3;
+    font-family: 'Pretendard-Bold';
+}
+
+.guide .guide_wrap .two_box .two_box_left .two_box_left_text p{
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
+.guide .guide_wrap .two_box .two_box_right{
+    background: url('../img/bg4.png')center center / cover no-repeat;
+    width: 586px;
+    height: 529px;
+    border-radius: 20px;
+    padding-top: 60px;
+    padding-left: 48px;
+}
+
+.guide .guide_wrap .two_box .two_box_right .title{
+    color: #fff;
+    font-size: 35px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    font-family: 'Pretendard-Bold';
+}
+
+.guide .guide_wrap .two_box .two_box_right .two_right_box_btn a{
+    width: 130px;
+    height: 45px;
+    background-color: #00000010;
+    display: block;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 45px;
+    text-align: center;
+    font-family: 'Pretendard-Medium';
+}
+
+
+/* 텍스트 슬라이드 시작 */
+
+.text_slide{
+    background-color: #fff;
+    font-size: 35px;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    margin-bottom: 120px;
+    padding: 10px;
+    overflow-x: hidden;
+}
+
+.text_slide .slide_group{
+    white-space: nowrap;
+    display: flex;
+    gap: 150px;
+    animation-name: textslide;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.text_slide .slide_group strong{
+    color: #AC192F;
+}
+
+.text_slide .slide_group1{
+    display: flex;
+    gap: 23px;
+    align-items: center;
+}
+
+.text_slide .slide_group1 img{
+    width: 66px;
+    height: 77px;
+    object-fit: cover;
+}
+
+.text_slide .slide_group2{
+    display: flex;
+    gap: 23px;
+    align-items: center;
+    font-family: 'Red Hat Display-Regular';
+}
+
+.text_slide .slide_group2 img{
+    width: 49px;
+    height: 64px;
+    object-fit: cover;
+}
+
+@keyframes textslide {
+    0%{
+        
+    }
+
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+/* 인스타 시작 */
+
+.insta{
+    width: 1440px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.insta h3{
+    font-size: 40px;
+    font-family: 'Pretendard-Bold';
+    margin-bottom: 30px;
+    line-height: 1;
+}
+
+.insta p{
+    font-size: 18px;
+    color: #555555;
+    font-family: 'Red Hat Display-Regular';
+    margin-bottom: 60px;
+}
+
+.insta .insta_wrap{
+    display: flex;
+    gap: 24px;
+    margin-bottom: 180px;
+}
+
+.insta .insta_wrap img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* 인스타 끝 */
+
+/* 이벤트 시작 */
+
+.event{
+    width: 1440px;
+    margin: 0 auto;
+}
+
+.event h3{
+    font-size: 40px;
+    font-family: 'Red Hat Display-Bold';
+    margin-bottom: 60px;
+    line-height: 1;
+    text-align: center;
+}
+
+.event .event_wrap{
+    display: flex;
+    gap: 24px;
+    margin-bottom: 180px;
+}
+
+.event .event_wrap .event_item{
+    position: relative;
+}
+
+.event .event_wrap .event_item img{
+    width: 708px;
+    height: 228px;
+    object-fit: contain;
+    display: block;
+}
+
+
+.event .event_wrap .event_item .event_text{
+    font-family: 'Pretendard-Medium';
+    font-size: 18px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 0 0 20px 20px;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    box-shadow: 5px 5px 20px #9b9b9b60;
+}
+
+.event .event_wrap .event_item .event_1 p{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #00000085;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    line-height: 60px;
+    position: absolute;
+    top: 14px;
+    right: 33px;
+}
+
+/* 이벤트 끝 */
+
+/* 퀵메뉴 시작 */
+
+.quick_menu aside {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: fixed;
+    top: 65%;
+    right: 1.5%;
+    z-index: 2;
+}
+
+.quick_menu aside img{
+    box-shadow: 5px 5px 20px #9b9b9b60;
+    border-radius: 20px;
+    display: block;
+}
+
+/* 푸터 시작 */
+
+.footer{
+    width: 100%;
+    background-color: #000;
+    color: #999;
+}
+
+.footer .footer_inner{
+    width: 1440px;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+.footer .footer_inner .footer_text_group{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 왼쪽 텍스트 그룹 시작 */
+
+.footer .footer_inner .footer_text_group .f_text_left .footer_logo{
+    width: 151px;
+    height: 13px;
+    object-fit: contain;
+    display: block;
+    margin-bottom: 30px;
+}
+
+.footer .footer_inner .footer_text_group .f_text_left .sns{
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.footer .footer_inner .footer_text_group .f_text_left .text_group_footer1 {
+    margin-bottom: 60px;
+}
+
+.footer .footer_inner .footer_text_group .f_text_left .text_group_footer1 a{
+    margin-right: 19px;
+    font-size: 16px;
+    font-family: 'Pretendard-Bold';
+}
+
+.footer .footer_inner .footer_text_group .f_text_left .text_group_footer1 .copyright{
+    font-size: 12px;
+}
+
+.footer .footer_inner .footer_text_group .f_text_left .text_group_footer1 strong{
+    color: #fff;
+}
+
+/* 왼쪽 텍스트 그룹 끝 */
+
+/* 오른쪽 텍스트 그룹 시작 */
+
+.footer .footer_inner .footer_text_group .f_text_right{
+    display: flex;
+    gap: 24px;
+}
+
+.footer .footer_inner .footer_text_group .f_text_right p{
+    font-family: 'Pretendard-Bold';
+    line-height: 1;
+}
+
+.footer .footer_inner .footer_text_group .f_text_right strong{
+    color: #fff;
+    font-size: 35px;
+}
+
+/* 푸터 끝 */
